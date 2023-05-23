@@ -3,6 +3,7 @@
 body{
   margin:0px;
   margin-bottom: 0px;
+  /* overflow: auto; */
 }
 
 @font-face {
@@ -23,7 +24,7 @@ body{
 
 
 /* opening */
-.opening {
+/* .opening {
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
@@ -76,7 +77,7 @@ body{
   text-align: center;
   color: white;
 
-}
+} */
 
 
 /* end opening */
@@ -93,11 +94,13 @@ body{
   background-size: 5% 6vh,100% 45vh, 100% 80vh;
   background-repeat: no-repeat;
   background-position: center bottom 270px,center bottom, center top;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
 }
 
 .section1 .quote{
@@ -141,7 +144,7 @@ body{
 .section1 .wedding .name h1{
   font-family: 'Beauty';
   text-align: center;
-  /* color: white; */
+  
   margin: 0;
   font-size: 70px;
 
@@ -150,7 +153,7 @@ body{
 .section1 .wedding h2{
   font-family: 'Avenir';
   text-align: center;
-  /* color: white; */
+  
   margin-top: 0px;
   font-size: 15px;
 
@@ -169,14 +172,19 @@ body{
   background-size: 150px 170px,170px 130px,5% 6vh, 150px 170px, 170px 130px;
   background-position: center top 40px,center top 60px,center top 400px,center bottom 160px,center bottom 180px;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
-  
+  display: none;
+  /* visibility: hidden; */
+  /* position: relative; */
   
 }
+
+
+
 
 .section2 .bridegroom .text-dec-groom {
   display: flex;
@@ -184,6 +192,13 @@ body{
   margin-top: -200px;
   align-items: center;
   margin-bottom: 150px;
+  opacity: 0;
+  transition: opacity 0.5
+
+}
+/* animasi */
+.section2 .bridegroom .text-dec-groom.animate {
+  opacity: 1;
 }
 
 .section2 .bridegroom .text-dec-bride {
@@ -285,12 +300,14 @@ body{
   background-size: 5% 6vh,100% 80vh, 100% 40vh, 100% 80vh;
   background-position: center bottom 200px,center top, center bottom;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
   color: white;
+  display: none;
+  /* visibility: hidden; */
   
   
 }
@@ -366,11 +383,13 @@ body{
   background-size: 100% 20vh,5% 6vh,80% 100vh;
   background-position: center top -125px,center,center;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
   /* color: ; */
 }
 
@@ -513,11 +532,13 @@ body{
   background-image:url('9\ 1.png') ;
   background-size: 100% 100vh;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
 }
 
 .section5 .wrap {
@@ -645,11 +666,13 @@ body{
   border-radius: 0px;
   background-size: 100% 100vh;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
 }
 
 .section6 .gallery-title {
@@ -741,11 +764,13 @@ body{
   border-radius: 0px;
   background-size: 100% 100vh;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
 }
 
 .section7 .wrap-gift {
@@ -778,11 +803,13 @@ body{
   background-size: 100% 20vh,80% 100vh;
   background-position: center top -125px,center,center;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
 }
 
 .section8 .wrap-reservation {
@@ -931,11 +958,13 @@ body{
   background-size: 100% 80vh;
   background-position: center top 50px;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
+  display: none;
+  /* visibility: hidden; */
   /* margin-top: 50px; */
 }
 
@@ -994,12 +1023,14 @@ body{
   background-color: #EDEBE3;
   width: 400px;
   height: 80px;
-  display: flex;
+  /* display: flex; */
   text-align: center;
   justify-content: center;
   align-items: center;
   font-family: 'Avenir';
   font-size: 10px;
+  display: none;
+  /* visibility: hidden; */
 }
 
 
@@ -1084,4 +1115,84 @@ body{
     width: 100%;
   }
 }
+
+
+
+
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax.animate {
+  transform: translateY(-100%); 
+ 
+  transition: transform 1s; 
+}
+
+.opening {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image: url('1.png'), url('DYT04382.JPG');
+  background-size: 100% 100vh, 100% 100vh;
+  background-repeat: no-repeat;
+  background-position: center top, center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  /* transform: translateZ(-1px) scale(2); */
+}
+
+.opening h1 {
+  font-family: 'Beauty';
+  text-align: center;
+  margin-top: 370px;
+  color: white;
+  font-size: 80px;
+}
+
+.opening h2 {
+  font-family: 'Avenir';
+  font-weight: 200;
+  color: white;
+}
+
+.opening .guest h2 {
+  font-family: 'Avenir-Bold';
+  text-align: center;
+  font-size: 30px;
+  margin-top: -7px;
+}
+
+.opening .guest h3 {
+  font-family: 'Avenir';
+  text-align: center;
+  color: white;
+}
+
+.opening .button a img {
+  width: 200px;
+  display: flex;
+  margin-left: 18px;
+  margin-bottom: 0px;
+}
+
+.opening .button {
+  margin-bottom: 200px;
+}
+
+/* CSS untuk efek parallax */
+
+
+
+
+
+
 
