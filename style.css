@@ -321,7 +321,7 @@ body{
   width: 400px;
   border-radius: 0px;
   background-image:url('4.png') ,url('7\ 1.png'), url('3.png'),url('section3bg.png') ;
-  background-size: 5% 6vh,100% 80vh, 100% 40vh, 100% 80vh;
+  background-size: 5% 6vh,100% 80vh, 100% 40vh, 100% 74.55vh;
   background-position: center bottom 200px,center top, center bottom;
   background-repeat: no-repeat;
   /* display: flex; */
