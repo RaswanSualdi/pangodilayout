@@ -16,6 +16,11 @@ body{
   src: url('fonts/Metropolis/Metropolis-Medium.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Avenir-regular';
+  src: url('fonts/Metropolis/Metropolis-Regular.otf') format('opentype');
+}
+
 
 @font-face {
   font-family: 'Avenir-Bold';
@@ -23,35 +28,37 @@ body{
 }
 
 
-/* opening */
-/* .opening {
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax.animate {
+  transform: translateY(-100%); 
+ 
+  transition: transform 1s; 
+}
+
+.opening {
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
   width: 400px;
   border-radius: 0px;
-  background-image: url('1.png'), url('DYT04382.JPG') ;
-  background-size: 100% 100vh;
+  background-image: url('1.png'), url('IMG_9785\ -\ Inaina\ Inaina.JPG');
+  background-size: 100% 100vh, 100% 100vh;
   background-repeat: no-repeat;
+  background-position: center top, center center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  
+  transform-style: preserve-3d;
+  /* transform: translateZ(-1px) scale(2); */
 }
 
-.opening .button a img {
-  width: 200px;  display: flex; margin-left: 18px; margin-bottom: 0px;
-  
-}
-
-.opening .button {
-   margin-bottom: 200px;
-  
-}
-
-.opening h1 {
+.opening .name{
   font-family: 'Beauty';
   text-align: center;
   margin-top: 370px;
@@ -65,22 +72,31 @@ body{
   color: white;
 }
 
-.opening .guest h2{
+.opening .guest h2 {
   font-family: 'Avenir-Bold';
   text-align: center;
   font-size: 30px;
   margin-top: -7px;
 }
 
-.opening .guest h3{
+.opening .guest h3 {
   font-family: 'Avenir';
   text-align: center;
   color: white;
+}
 
-} */
+.opening .button a img {
+  width: 200px;
+  display: flex;
+  margin-left: 18px;
+  margin-bottom: 0px;
+}
 
+.opening .button {
+  margin-bottom: 200px;
+}
 
-/* end opening */
+/* CSS untuk efek parallax */
 
 /* section1 */
 
@@ -90,16 +106,16 @@ body{
   height: 100vh;
   width: 400px;
   border-radius: 0px;
-  background-image: url('4.png'), url('3.png'), url('DYT04401.JPG') ;
+  background-image: url('4.png'), url('3.png'), url('section1.jpeg') ;
   background-size: 5% 6vh,100% 45vh, 100% 80vh;
   background-repeat: no-repeat;
   background-position: center bottom 270px,center bottom, center top;
-  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #EDEBE3;
   display: none;
+  color: white;
   /* visibility: hidden; */
 }
 
@@ -124,7 +140,7 @@ body{
 
 .section1 .quote p1 {
   text-align: center;
-  font-family: 'Avenir';
+  font-family: 'Avenir-Regular';
   color: white;
 }
 
@@ -168,8 +184,8 @@ body{
   height: 100vh;
   width: 400px;
   border-radius: 0px;
-  background-image:url('decoration.png'),url('Laki.png'),url('6\ 1.png'), url('decoration2.png'),url('Laki.png') ;
-  background-size: 150px 170px,170px 130px,5% 6vh, 150px 170px, 170px 130px;
+  background-image:url('decoration.png'),url('L.png'),url('6\ 1.png'), url('decoration2.png'),url('W.png') ;
+  background-size: 150px 180px,115px 140px,5% 6vh, 150px 180px, 115px 140px;
   background-position: center top 40px,center top 60px,center top 400px,center bottom 160px,center bottom 180px;
   background-repeat: no-repeat;
   /* display: flex; */
@@ -192,7 +208,7 @@ body{
   margin-top: -200px;
   align-items: center;
   margin-bottom: 150px;
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.5
 
 }
@@ -212,15 +228,17 @@ body{
 .section2 .bridegroom .text-dec-groom p1{
   
   margin-top: -45px;
-  font-family: 'Avenir';
+  font-family: 'Avenir-Bold';
   color: #758671;
+  /* font-weight: bold; */
 }
 
 .section2 .bridegroom .text-dec-bride p1{
   
   margin-top: -45px;
-  font-family: 'Avenir';
+  font-family: 'Avenir-Bold';
   color: #758671;
+  /* font-weight: bold; */
 }
 
 .section2 .bridegroom .text-dec-groom .ig{
@@ -229,10 +247,10 @@ body{
   height: 20px;
   background-color: #758671;
   border-radius: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 1px 7px;
-  margin-top: 15px;
-  margin-bottom: -5px;
+  /* margin-top: 15px; */
+  margin-bottom: -10px;
 }
 
 .section2 .bridegroom .text-dec-bride .ig{
@@ -241,10 +259,10 @@ body{
   height: 20px;
   background-color: #758671;
   border-radius: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 1px 7px;
-  margin-top: 15px;
-  margin-bottom: -5px;
+  /* margin-top: 15px; */
+  margin-bottom: -10px;
 }
 
 .section2 .bridegroom .text-dec-groom .ig a {
@@ -261,16 +279,16 @@ body{
 .section2 .bridegroom .text-dec-groom h2{
   font-family: 'Beauty';
   color: #758671;
-  font-size: 50px;
-  margin-top: 110px;
+  font-size: 45px;
+  margin-top: 107px;
 
 }
 
 .section2 .bridegroom .text-dec-bride h2{
   font-family: 'Beauty';
   color: #758671;
-  font-size: 50px;
-  margin-top: 110px;
+  font-size: 45px;
+  margin-top: 132px;
 
 }
 .section2 .bridegroom .text-dec-groom p2{
@@ -278,6 +296,10 @@ body{
   font-family: 'Avenir';
   color: #758671;
   text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  
+
 }
 
 .section2 .bridegroom .text-dec-bride p2{
@@ -285,6 +307,8 @@ body{
   font-family: 'Avenir';
   color: #758671;
   text-align: center;
+  font-style: italic;
+  font-size: 13px;
 }
 
 /* end section 2 */
@@ -906,6 +930,10 @@ body{
   margin-bottom: 20px;
 }
 
+.section8 .wrap-reservation .chat .row-auto .col-auto .content-chat {
+  font-family: 'Avenir-Regular';
+  font-size: 13px;
+}
 .section8 .wrap-reservation .chat {
   margin-top: 20px;
   padding: 30px;
@@ -1068,6 +1096,7 @@ body{
 @media (max-width: 768px) {
   .opening {
     width: 100%;
+    height: 100vh;
   }
 
   .opening .button {
@@ -1077,118 +1106,65 @@ body{
 
   .section1 {
     width: 100%;
+    height: 100vh;
   }
 
   .section2 {
     width: 100%;
+    height: 100vh;
+
   }
 
   .section3 {
     width: 100%;
+    height: 100vh;
+
   }
   
   .section4 {
     width: 100%;
+    height: 100vh;
+
   }
 
   .section5 {
     width: 100%;
+    height: 100vh;
+
   }
 
   .section6 {
     width: 100%;
+    height: 100vh;
+
   }
 
   .section7 {
     width: 100%;
+    height: 100vh;
+
   }
 
   .section8 {
     width: 100%;
+    height: 100vh;
+
   }
 
   .section9 {
     width: 100%;
+    height: 100vh;
+    
+
   }
 
   .footer{
     width: 100%;
+    height: 100vh;
+
   }
 }
 
-
-
-
-
-.parallax {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.parallax.animate {
-  transform: translateY(-100%); 
- 
-  transition: transform 1s; 
-}
-
-.opening {
-  margin-left: auto;
-  margin-right: auto;
-  height: 100vh;
-  width: 400px;
-  border-radius: 0px;
-  background-image: url('1.png'), url('DYT04382.JPG');
-  background-size: 100% 100vh, 100% 100vh;
-  background-repeat: no-repeat;
-  background-position: center top, center center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform-style: preserve-3d;
-  /* transform: translateZ(-1px) scale(2); */
-}
-
-.opening h1 {
-  font-family: 'Beauty';
-  text-align: center;
-  margin-top: 370px;
-  color: white;
-  font-size: 80px;
-}
-
-.opening h2 {
-  font-family: 'Avenir';
-  font-weight: 200;
-  color: white;
-}
-
-.opening .guest h2 {
-  font-family: 'Avenir-Bold';
-  text-align: center;
-  font-size: 30px;
-  margin-top: -7px;
-}
-
-.opening .guest h3 {
-  font-family: 'Avenir';
-  text-align: center;
-  color: white;
-}
-
-.opening .button a img {
-  width: 200px;
-  display: flex;
-  margin-left: 18px;
-  margin-bottom: 0px;
-}
-
-.opening .button {
-  margin-bottom: 200px;
-}
-
-/* CSS untuk efek parallax */
 
 
 

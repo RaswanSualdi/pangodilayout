@@ -81,29 +81,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
-//animasi bride di section 2
-document.addEventListener('DOMContentLoaded', function() {
-  var textDecGroom = document.querySelector('.text-dec-groom');
 
-  function isInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function animateOnScroll() {
-    if (isInViewport(textDecGroom)) {
-      textDecGroom.classList.add('animate');
-      window.removeEventListener('scroll', animateOnScroll);
-    }
-  }
-
-  window.addEventListener('scroll', animateOnScroll);
-});
 
 
 function showImage(element) {
@@ -164,8 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     section9.style.display = 'flex';
     footer.style.display = 'flex';
 
-     // Tambahkan kelas "show" pada section2
-     section2.classList.add('show');
+    
 
     // Scroll ke elemen section1
     section1.scrollIntoView({ behavior: 'smooth' });
