@@ -46,7 +46,7 @@ body{
   height: 100vh;
   width: 400px;
   border-radius: 0px;
-  background-image: url('1.png'), url('IMG_9785\ -\ Inaina\ Inaina.JPG');
+  background-image: url('1.png'), url('opening.png');
   background-size: 100% 100vh, 100% 100vh;
   background-repeat: no-repeat;
   background-position: center top, center center;
@@ -320,7 +320,7 @@ body{
   height: 100vh;
   width: 400px;
   border-radius: 0px;
-  background-image:url('4.png') ,url('7\ 1.png'), url('3.png'),url('ina.jpeg') ;
+  background-image:url('4.png') ,url('7\ 1.png'), url('3.png'),url('section3bg.png') ;
   background-size: 5% 6vh,100% 80vh, 100% 40vh, 100% 80vh;
   background-position: center bottom 200px,center top, center bottom;
   background-repeat: no-repeat;
